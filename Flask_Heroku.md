@@ -60,7 +60,7 @@ postgres -D ~/postgres/data/
 - Created a 'hello world' flask app and added to github here: https://github.com/jjocemac/flask-hello-world.git
 - Repo includes a file called `Procfile` with one line of code:
 ```
-web: gunicorn hello:app --log-file
+web: gunicorn hello:app --log-file -
 ```
 - Created a python3 pipenv within the repo main directory, installed the dependencies and added pipfiles to the git repo:
 ```
