@@ -53,7 +53,7 @@ postgres -D ~/postgres/data/
 ```
 - To connect to the DB, in another shell:
 ```
-~/SW/postgres/bin/psql -U earjjo postgres
+psql -U earjjo postgres
 ```
 
 ## 'Hello world' app
