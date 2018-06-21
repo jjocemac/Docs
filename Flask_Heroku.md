@@ -108,7 +108,7 @@ $ git push heroku master
 $ heroku run python manage.py migrate
 $ heroku open
 ```
-- To run the app locally ***CURRENTLY DOESN'T WOK***:
+- To run the app locally ***CURRENTLY DOESN'T WORK***:
 ```sh
 $ ~/.local/bin/pipenv --three install
 $ ~/.local/bin/pipenv shell
@@ -119,3 +119,17 @@ $ python manage.py collectstatic
 $ heroku local
 ```
 
+## [This](https://medium.com/the-andela-way/deploying-a-python-flask-app-to-heroku-41250bda27d0) heroku+flask+postgreSQL app
+- Get repo:
+```sh
+$ cd ~/gitRepos
+$ git clone https://github.com/heroku/python-getting-started.git
+$ cd bucket_api_heroku
+```
+- Set up venv and Procfile:
+```
+$ ~/.local/bin/pipenv --three install
+$ ~/.local/bin/pipenv shell
+$ ~/.local/bin/pipenv install gunicorn
+$ echo 'web: gunicorn app:app' > Procfile
+```
