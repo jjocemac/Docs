@@ -81,3 +81,11 @@ heroku create
 git push heroku master
 heroku open
 ```
+- To stop the app, type (from inside main dir):
+```
+heroku ps:scale web=0
+```
+- To relaunch the app, type (from inside main dir):
+```
+heroku ps:scale web=1
+```
