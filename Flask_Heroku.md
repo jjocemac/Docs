@@ -89,6 +89,10 @@ $ heroku ps:scale web=0
 ```sh
 $ heroku ps:scale web=1
 ```
+- To get an interactive bash shell on the Heroku dyno that is running the app:
+```sh
+$ heroku run bash
+```
 
 ## Heroku's 'python-getting-started' app
 - Get repo:
@@ -101,4 +105,17 @@ $ cd python-getting-started
 ```sh
 $ heroku create
 $ git push heroku master
+$ heroku run python manage.py migrate
+$ heroku open
 ```
+- To run the app locally ***CURRENTLY DOESN'T WOK***:
+```sh
+$ ~/.local/bin/pipenv --three install
+$ ~/.local/bin/pipenv shell
+$ export DATABASE_URL=postgres://$(whoami)
+$ createdb python_getting_started
+$ python manage.py migrate
+$ python manage.py collectstatic
+$ heroku local
+```
+
