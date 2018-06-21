@@ -127,9 +127,17 @@ $ git clone https://github.com/heroku/python-getting-started.git
 $ cd bucket_api_heroku
 ```
 - Set up venv and Procfile:
-```
+```sh
 $ ~/.local/bin/pipenv --three install
 $ ~/.local/bin/pipenv shell
 $ ~/.local/bin/pipenv install gunicorn
 $ echo 'web: gunicorn app:app' > Procfile
+$ git rm requirements.txt
+$ git add -A
+$ git commit -m "Pip and Proc files"
+```
+- Heroku steps:
+```sh
+$ heroku create
+$ git push heroku master
 ```
